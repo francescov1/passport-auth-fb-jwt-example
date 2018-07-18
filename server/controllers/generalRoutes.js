@@ -1,3 +1,4 @@
+'use strict';
 
 // test route for after user has logged in
 exports.route = function(req, res, next) {

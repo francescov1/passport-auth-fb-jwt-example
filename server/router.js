@@ -1,3 +1,4 @@
+'use strict';
 const AuthenticationController = require('./controllers/authentication');
 const GeneralRoutes = require('./controllers/generalRoutes');
 const express = require('express');

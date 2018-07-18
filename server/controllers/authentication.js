@@ -1,9 +1,7 @@
 'use strict';
-
-const util = require('util'),
-      jwt = require('jsonwebtoken'),
-      User = require('../models/user'),
-      config = require('../config/main');
+const jwt = require('jsonwebtoken');
+const User = require('../models/user');
+const config = require('../config/main');
 
 // generate jwt token with basic user data
 function generateTokenResponse(user) {
