@@ -5,7 +5,7 @@ const express = require('express');
 const passportService = require('./config/passport');
 const passport = require('passport');
 
-// Middleware to login
+// middleware to login
 const login = passport.authenticate(['local', 'facebook-token'], { session: false });
 
 // middleware to authenticate requests from previously logged in user
