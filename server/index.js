@@ -11,8 +11,11 @@ const router = require('./router');
 const config = require('./config/main');
 global.Promise = require('bluebird');
 
+// set up database
 mongoose.connect(config.database, { useNewUrlParser: true });
 mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // set up basic middleware
 app.use(logger('dev'));
