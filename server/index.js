@@ -1,4 +1,6 @@
 'use strict';
+require('dotenv').config();
+
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -10,6 +12,7 @@ const config = require('./config/main');
 global.Promise = require('bluebird');
 
 mongoose.connect(config.database, { useNewUrlParser: true });
+mongoose.Promise = global.Promise;
 
 // set up basic middleware
 app.use(logger('dev'));

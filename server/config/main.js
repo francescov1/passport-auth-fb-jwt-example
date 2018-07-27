@@ -2,13 +2,13 @@ module.exports = {
   // secret key for jwt signing and encryption
   'secret': 'secret passphrase',
   // db connection info
-  'database': 'mongodb://<connection>',
+  'database': process.env.MONGODB_CONNECTION,
   // port for server
   'port': process.env.PORT || 3000,
 
   // fb sdk credentials
   'fb': {
-    'appID' : '<fb_app_id>',
-    'appSecret' : '<fb_app_secret>'
+    'appID' : process.env.FACEBOOK_APP_ID,
+    'appSecret' : process.env.FACEBOOK_APP_SECRET
   }
-}
+};
