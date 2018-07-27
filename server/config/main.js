@@ -1,6 +1,6 @@
 module.exports = {
   // secret key for jwt signing and encryption
-  'secret': 'secret passphrase',
+  'secret': process.env.JWT_SECRET,
   // db connection info
   'database': process.env.MONGODB_CONNECTION,
   // port for server
