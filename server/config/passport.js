@@ -42,8 +42,8 @@ const fbLogin = new FacebookTokenStrategy(fbCredentials, function(accessToken, r
   // if user is already in db, return user
 	return User.findOne({ 'facebook.id': profile.id })
     .then(existingUser => {
-  		if(existingUser)
-  			done(null, existingUser);
+  		if (existingUser)
+  			return existingUser;
 
       let user = new User({
         email: profile.emails[0].value,
